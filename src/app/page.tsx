@@ -5,18 +5,25 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="global-px">
-      <section className="flex flex-wrap items-center">
-        <div className="w-1/2 ">
+      <section className="flex flex-wrap items-center lg:px-[5%]">
+        <div className="w-1/3">
           <div>
-            <p className="text-[64px] font-bold">Atletic Core</p>
-            <p className="pt-[10px] pb-[60px] text-[#000000BF] text-[24px] font-normal">Váš osobný tréner vo vrecku</p>
-            <Button isSelected href="/training/adults">Začnite trénovať</Button>
+            <p className="lg:text-[64px] md:text-[55px] sm:text-[45px] text-[30px] font-bold">Atletic Core</p>
+            <p className="pt-[10px] pb-[60px] text-[#000000BF] lg:text-[32px] md:text-[24px] sm:text-[21px] text-[18px]  font-normal">Váš osobný tréner vo vrecku</p>
+            <div className="hidden lg:flex">
+              <Button isSelected href="/training/adults">Začnite trénovať</Button>
+            </div>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-2/3">
           <Image src={Images.ManMainPage} alt="Big man"/>          
         </div>
       </section>
+
+      {/* Only on the mobile version */}
+      <div className="block py-[10px] lg:hidden w-full">
+        <Button style={{display: "flex", justifyContent: "center", alignItems: "center"}} isSelected href="/training/adults">Začnite trénovať</Button>
+      </div>
 
       <section className="flex flex-wrap text-center pt-[20px]">
         <div className="flex-1 min-w-[250px] flex flex-col items-center gap-y-[15px] gap-x-[20px]">
