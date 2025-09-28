@@ -42,7 +42,7 @@ export default function Home() {
 
       <section className="py-[20vh]">
         <p className="text-[30px] font-normal italic">
-          <span className="text-[35px] font-bold">Athletic Core</span> je online kolekcia cvičení na tréning v posilňovni, rozcvičky, strečing a crossfit. Vytvorte si vlastný plán, dosiahnite svoje ciele bez zranení a rýchlejšie sa zotavte.
+          <span className="text-[35px] font-bold">Athletic Core</span> je zbierka jednoduchých cvičení na posilňovanie, rozcvičku, strečing a crossfit. Je určený pre všetky vekové skupiny a pomôže zostaviť plán, predísť zraneniam a podporiť zotavenie. (akronim)
         </p>
       </section>
 
