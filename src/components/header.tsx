@@ -9,7 +9,7 @@ import { useState } from "react";
 
 export default function Header() {
     const pagesNames = ["Pre Deti", "Pre Tínedžeri", "Pre Dospelí", "Pre Starší ľudia"]
-    const pagesArr = ["/training/children", "/training/teenagers", "/training/adults", "/training/old"];
+    const pagesArr = ["/training/children", "/training/teenagers", "/training/adults", "/training/olds"];
     const pathname = usePathname();
     let pageName = pathname || "";
     const [open, setOpen] = useState(false);
