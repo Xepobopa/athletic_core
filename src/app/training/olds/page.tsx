@@ -1,5 +1,5 @@
-import Training from "athletic/components/Training";
-import { Images } from "athletic/images/images";
+import Training from "athletic/components/Training"
+import { Images } from "athletic/images/images"
 
 export const metadata = {
   title: 'Child training',
@@ -11,10 +11,10 @@ const schedule = [
     day: "Pondelok",
     isFree: false,
     training: [
-      "Kľuky 3 série po 10 opakovaní",
+      "Tlak s činkami na rovnej lavičke 3 série po 10 opakovaní",
       "Zdvihy činiek na biceps 3 série po 12 opakovaní",
       "Drepy 3 série po 15 opakovaní",
-      "Brušáky (press) 3 série po 10 opakovaní",
+      "Sťahovanie hornej kladky 3 série po 10 opakovaní",
       "Rozpažovanie s činkami 3 série po 10 opakovaní",
     ],
   },
@@ -27,11 +27,11 @@ const schedule = [
     day: "Streda",
     isFree: false,
     training: [
-      "Zhyby 3 série po 5–10 opakovaní",
+      "Príťahy s pákovým strojom 3 série po 10 opakovaní",
       "Triceps na kladke 3 série po 10 opakovaní",
       "Drepy 3 série po 15 opakovaní",
-      "Tlaky s činkami na lavičke v uhle 30° 3 série po 8–10 opakovaní",
-      "Brušáky 3 série po 10–15 opakovaní",
+      "Tlak s činkami na lavičke v uhle 30° 3 série po 8–10 opakovaní",
+      "Hyperextenzia 3 série po 12 opakovaní",
     ],
   },
   {
@@ -44,7 +44,7 @@ const schedule = [
     isFree: false,
     training: [
       "Drepy 3 série po 10–15 opakovaní",
-      "Hyperextenzia 3 série po 8–10 opakovaní",
+      "Tlak s činkami na predné ramená 3 série po 12 opakovaní",
       "Sťahovanie hornej kladky 3 série po 10–12 opakovaní",
       "Kľuky 3 série po 10–12 opakovaní",
       "Zdvihy činiek na biceps 3 série po 10 opakovaní",
@@ -63,13 +63,9 @@ const schedule = [
 ];
 
 
-const text = `Deťom od 11 do 14 rokov je lepšie cvičiť v telocvični najviac 3 razy do týždňa.
-Podľa programu „full-body“ môže dieťa za jeden tréning dobre precvičiť hlavné svaly.
-Medzi tréningami treba mať 1 deň voľno.
-Dôležité:
-Osoba, ktorá zodpovedá za dieťa, musí sledovať jeho stav, stravu a spánok.`
+const text = `Pre starších ľudí sa rovnako ako pre deti odporúča program „full-body“, pretože pomáha udržiavať telo v dobrej forme a nepreťažuje ho. Odporúča sa tiež robiť každodenné kardio. Najlepšie je cvičiť 3-krát do týždňa.`
 
-export default async function Children ({
+export default async function Old ({
   
   params,
   searchParams,
@@ -77,5 +73,5 @@ export default async function Children ({
   params: Promise<{ slug: string }>
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
-   return Training({ text: text, image: Images.Children1, schedule })
+   return Training({ text: text, image: Images.Old, schedule })
 }
