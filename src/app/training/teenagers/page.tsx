@@ -77,5 +77,5 @@ export default async function Teenagers ({
   params: Promise<{ slug: string }>
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
-   return Training({ text: text, image: Images.Adult, schedule })
+   return Training({ text: text, image: Images.Teenager, schedule })
 }
