@@ -9,7 +9,7 @@ type TrainingProps = {
 
 export default function Training({ text, image, schedule }: TrainingProps) {
  return (
-        <div className="global-px">
+        <div>
             <section className="flex flex-wrap text-center pt-[20px] gap-x-[100px]">
               <div className="flex-1 min-w-[300px] flex flex-col justify-center items-center gap-y-[15px]">
                 <p className="font-[400] text-[24px] lg:text-[32px]">{text}</p>

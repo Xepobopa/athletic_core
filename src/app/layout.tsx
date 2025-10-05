@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="sk">
       <body
-        className={`${interDefault.variable} antialiased`}
+        className={`${interDefault.variable} antialiased global-px`}
       >
         <Header/>
         {children}

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="global-px">
+    <div>
       <section className="flex flex-wrap items-center lg:px-[5%]">
         <div className="w-1/3">
           <div>
