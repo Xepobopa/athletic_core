@@ -8,8 +8,8 @@ import { Menu, X } from "lucide-react"; // иконки (lucide-react или her
 import { useState } from "react";
 
 export default function Header() {
-    const pagesNames = ["Pre Deti", "Pre Tínedžeri", "Pre Dospelí", "Pre Starší ľudia", "SWOT"]
-    const pagesArr = ["/training/children", "/training/teenagers", "/training/adults", "/training/olds", "/swot"];
+    const pagesNames = ["Pre Deti", "Pre Tínedžeri", "Pre Dospelí", "Pre Starší ľudia", "SWOT", "Gantt"]
+    const pagesArr = ["/training/children", "/training/teenagers", "/training/adults", "/training/olds", "/swot", "/gantt"];
     const pathname = usePathname();
     let pageName = pathname || "";
     const [open, setOpen] = useState(false);

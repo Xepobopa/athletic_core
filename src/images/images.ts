@@ -12,6 +12,7 @@ import Teenager from "./images/teenager.png";
 import Adult from "./images/adult.png";
 import Old from "./images/old.png";
 import SWOT from "./images/SWOT.jpg";
+import Gantt from "./images/gantt.png";
 
 export const Images = {
     ManMainPage,
@@ -27,5 +28,6 @@ export const Images = {
     Teenager,
     Adult,
     Old,
-    SWOT
+    SWOT,
+    Gantt
 }

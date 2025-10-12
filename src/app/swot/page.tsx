@@ -7,7 +7,7 @@ export const metadata = {
   description: 'SWOT analize for AthletiCore Project.',
 }
 
-export default async function Teenagers ({
+export default async function SWOT ({
   params,
   searchParams,
 }: {
