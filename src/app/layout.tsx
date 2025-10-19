@@ -22,9 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sk">
-      <body
-        className={`${interDefault.variable} antialiased global-px`}
-      >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
+      </head>
+      <body className={`${interDefault.variable} antialiased global-px`}>
         <Header/>
         {children}
       </body>
