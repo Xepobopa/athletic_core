@@ -13,7 +13,7 @@ export function Button({href, isSelected, style, children}: ButtonProps) {
         <Link 
             href={href}
             className={cn(
-                "px-[32px] py-[20px] text-center text-center rounded-[8px] border-1 border-transparent transition-colors font-[500] text-[20px]",
+                "px-[22px] py-[12px] text-center text-center rounded-[8px] border-1 border-transparent transition-colors font-[500] text-[16px]",
                 "hover:border-black",
                 "active:bg-black active:text-white",
                 isSelected && "bg-black text-white"
