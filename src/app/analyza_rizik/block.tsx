@@ -12,7 +12,7 @@ type BlockProps = {
 
 export default function Block({title, desc, probabilityScore, impactScore, conseq, solution}: BlockProps) {
     return (
-        <div className="w-1/2 mx-auto mt-12 bg-white rounded-2xl shadow-xl p-10 font-[Jost] text-3xl flex flex-col gap-[30px]">
+        <div className="w-4/5 mx-auto mt-12 bg-white rounded-2xl shadow-xl p-10 font-[Jost] text-3xl flex flex-col gap-[30px]">
             <h1 className="font-bold text-5xl font-[Jost] pb-[20px] pt-[50px]">{title}</h1>
             {/* <div className="font-[Jost] text-3xl">{children}</div> */}
             <div>
