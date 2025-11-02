@@ -43,11 +43,13 @@ export default async function FinanceAnalyzePlan ({
             title="💰 Počiatočná investícia"
             items={[
               { label: "Položka", value: "Náklady" },
-              { label: "Osobní tréneri", value: "1 200 €" },
-              { label: "Hlavný tréner (plány)", value: "850 €" },
-              { label: "Technická podpora", value: "1 000 €" },
+              { label: "Vývoj mobilnej aplikácie", value: "≈ 8 500 €" },
+              { label: "Vývoj webu", value: "≈ 8 500 €" },
+              { label: "Implementácia AI", value: "≈ 5 000 €" },
+              { label: "Testovanie", value: "≈ 1 000 €" },
+              { label: "Úvodná reklama", value: "≈ 3 000 – 5 000 €" },
             ]}
-            totalValue="≈ 4 250 € / mesiac"
+            totalValue="≈ 26 000 – 28 000 €"
           />
 
 
