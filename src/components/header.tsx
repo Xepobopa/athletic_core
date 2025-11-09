@@ -8,11 +8,12 @@ import { Menu, X } from "lucide-react"; // иконки (lucide-react или her
 import { useState } from "react";
 
 export default function Header() {
-    const pagesNames = ["Pre Deti", "Pre Tínedžeri", "Pre Dospelí", "Pre Starší ľudia", "SWOT", "Gantt", "Business Plan", "Finančná analýza"," Analýza rizík"]
-    const pagesArr = ["/training/children", "/training/teenagers", "/training/adults", "/training/olds", "/swot", "/gantt", "/plan", "/finance_analyze", "/analyza_rizik"];
+    const pagesNames = ["Pre Deti", "Pre Tínedžeri", "Pre Dospelí", "Pre Starší ľudia", "SWOT", "Gantt", "Business Plan", "Finančná analýza"," Analýza rizík", "Plán riadenia kvality"]
+    const pagesArr = ["/training/children", "/training/teenagers", "/training/adults", "/training/olds", "/swot", "/gantt", "/plan", "/finance_analyze", "/analyza_rizik", '/plan_kvality'];
     const pathname = usePathname();
     let pageName = pathname || "";
     const [open, setOpen] = useState(false);
+
 
     return (
         <header className="global-py font">
@@ -20,13 +21,28 @@ export default function Header() {
                 <Link href="/">
                     <Image alt="logo" src={Images.Logo} height={50} width={50}/>
                 </Link>
-                
-                <ul className="hidden lg:flex flex flex-row gap-[1vh]">
-                    {pagesNames.map((name, index) => (
+
+
+                <ul className="hidden lg:flex flex-row gap-[1vh]">
+                    {pagesNames.map((name, index) => {
+                        if (index >= 4) return null;
+                        return (
                         <li key={index}>
-                            <Button isSelected={pagesArr[index] == pageName} href={pagesArr[index]} >{name}</Button>
+                            <Button
+                            isSelected={pagesArr[index] === pageName}
+                            href={pagesArr[index]}
+                            >
+                            {name}
+                            </Button>
                         </li>
-                    ))}
+                        );
+                    })}
+                    <li key={5}>
+                        <button onClick={() => setOpen(!open)}>
+                            {open ? <X size={28}/> : <Menu size={28}/>}
+                        </button>
+                    </li>
+                    
                 </ul>
 
                 {/* Кнопка-бургер (только на телефонах) */}
@@ -38,6 +54,28 @@ export default function Header() {
                 </button>
 
             </div>
+            {
+                open ? 
+                <div className="flex justify-end">
+                    <ul className="hidden lg:flex flex-row gap-[1vh]">
+                        {pagesNames.map((name, index) => {
+                            if (index < 4) return null;
+                            return (
+                            <li key={index}>
+                                <Button
+                                isSelected={pagesArr[index] === pageName}
+                                href={pagesArr[index]}
+                                >
+                                {name}
+                                </Button>
+                            </li>
+                            );
+                        })}
+                    </ul> 
+                </div>
+                : 
+                null
+            }
             <ul
                 className={`flex flex-col items-center gap-4 py-4 bg-gray-100 mt-[10px] lg:hidden
                     transition-all duration-300 ease-in-out
