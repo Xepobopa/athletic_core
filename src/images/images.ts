@@ -13,6 +13,8 @@ import Adult from "./images/adult.png";
 import Old from "./images/old.png";
 import SWOT from "./images/SWOT.jpg";
 import Gantt from "./images/gantt.png";
+import TG_Logo from "./images/tglogo.webp";
+import Timeghost from "./images/timeghost.webp";
 
 export const Images = {
     ManMainPage,
@@ -29,5 +31,7 @@ export const Images = {
     Adult,
     Old,
     SWOT,
-    Gantt
+    Gantt,
+    TG_Logo,
+    Timeghost
 }
